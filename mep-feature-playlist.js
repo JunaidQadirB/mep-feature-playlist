@@ -95,7 +95,7 @@
              
                 var nxt = $(".mejs-layers .mejs-playlistWindow > ul > li > a.current").parent().next();
                 if(nxt.length <1){
-                    return;
+                    nxt = $(".mejs-layers .mejs-playlistWindow > ul > li:first-child > a").parent();
                 }
                 var url =nxt.children("a").attr("data-url");
                 $(".mejs-layers .mejs-playlistWindow > ul li a").removeClass("current");
@@ -104,12 +104,11 @@
             };
             
             var loadPrevTrack = function (){
-             
                 var prev = $(".mejs-layers .mejs-playlistWindow > ul > li > a.current").parent().prev();
                 if(prev.length <1){
-                    return;
+                    prev = $(".mejs-layers .mejs-playlistWindow > ul > li:last-child > a").parent();
                 }
-                var url =prev.children("a").attr("data-url");
+                var url = prev.children("a").attr("data-url");
                 $(".mejs-layers .mejs-playlistWindow > ul li a").removeClass("current");
                 prev.children("a").addClass("current");
                 loadTrack(media, url);
@@ -124,7 +123,23 @@
                         media.play();
                     }    
                 }
-            }
+            };
+            
+            /**
+             * When play is clicked, highlight the track being played in the 
+             * playlist window
+             */
+            media.addEventListener("play",function(e){
+                $(".mejs-layers .mejs-playlistWindow > ul li a").removeClass("current");
+                $(".mejs-layers .mejs-playlistWindow > ul li a").each(function(){
+                    if(media.src == $(this).attr("data-url")){
+                        $(this).addClass("current");
+                        return;
+                    }
+                });
+                
+                
+            }, true);
             
             $(".mejs-layers .mejs-playlistWindow > ul li a").on("click",function(){                
                 try{                   
