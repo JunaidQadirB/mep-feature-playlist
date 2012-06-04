@@ -1,0 +1,66 @@
+/* 
+    Document   : mep-feature-playlist
+    Created on : Jun 5, 2012, 1:22:26 AM
+    Author     : Junaid Qadir Baloch <shekhanzai.baloch@gmail.com>
+    
+*/
+
+
+/*Start: PlaylistWindow*/
+.mejs-playlistWindow{
+    position: absolute;
+    top:  30px;
+    left: 0;
+    height: 200px!important;
+    overflow-y: auto;
+    background: #000000;
+    padding: 4px 0;
+}
+
+/* Start: Show/Hide Playlist*/
+.mejs-controls .mejs-show-playlist button {
+    background-position: -96px -16px;
+}
+.mejs-controls .mejs-hide-playlist button {
+    background-position: -110px -16px;
+}
+/* End: Show/Hide Playlist */
+
+/* Start: Previous */
+.mejs-controls .mejs-prev button {
+    background-position: -144px -16px;
+}
+/* End: Previous */
+
+/* Start: Next */
+.mejs-controls .mejs-next button {
+    background-position:-144px 0;
+}
+/* End: Next */
+
+.mejs-playlistWindow a, .mejs-playlistWindow a:hover, .mejs-playlistWindow a:visited, .mejs-playlistWindow a:active{
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+
+
+
+.mejs-playlistWindow a.current{
+    font-weight: bold;
+}
+
+.mejs-playlistWindow ul
+{
+    margin: 0;
+    padding: 5px 10px;
+}
+.mejs-playlistWindow li{
+    height: 20px;
+    overflow: hidden;
+    padding-left: 2px;
+}
+/*End: PlaylistWindow*/
