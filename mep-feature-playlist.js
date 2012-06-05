@@ -15,6 +15,25 @@
         buildplaylist: function(player, controls, layers, media) {            
             var 
             t = this,
+            // PREVIOUS TRACK BUTTON
+            prevButton = $('<div class="mejs-button mejs-prev-button mejs-prev">' +
+                '<button type="button" aria-controls="' + t.id + '" title="' + t.options.prevText + '"></button>' +
+                '</div>')
+            .appendTo(controls)
+            .click(function(e){
+                e.preventDefault();
+                loadPrevTrack();
+                
+            }),
+            // NEXT TRACK BUTTON
+            nextButton = $('<div class="mejs-button mejs-next-button mejs-next">' +
+                '<button type="button" aria-controls="' + t.id + '" title="' + t.options.nextText + '"></button>' +
+                '</div>')
+            .appendTo(controls)
+            .click(function(e){
+                e.preventDefault();
+                loadNextTrack();
+            }),
             playlistWindow = 
             $('<div class="mejs-layer mejs-playlistWindow">' +
                 '<ul class="mejs"></ul>' +
@@ -40,25 +59,6 @@
                     playlistButton.removeClass("mejs-show-playlist").addClass("mejs-hide-playlist");
                 }
                 return false;
-            }),
-            // PREVIOUS TRACK BUTTON
-            prevButton = $('<div class="mejs-button mejs-prev-button mejs-prev">' +
-                '<button type="button" aria-controls="' + t.id + '" title="' + t.options.prevText + '"></button>' +
-                '</div>')
-            .appendTo(controls)
-            .click(function(e){
-                e.preventDefault();
-                loadPrevTrack();
-                
-            }),
-            // NEXT TRACK BUTTON
-            nextButton = $('<div class="mejs-button mejs-next-button mejs-next">' +
-                '<button type="button" aria-controls="' + t.id + '" title="' + t.options.nextText + '"></button>' +
-                '</div>')
-            .appendTo(controls)
-            .click(function(e){
-                e.preventDefault();
-                loadNextTrack();
             });
             
             getTrackName = function(trackUrl){
