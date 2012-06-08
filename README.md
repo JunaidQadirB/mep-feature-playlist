@@ -9,11 +9,11 @@ Download [mediaElemntjs] (http://github.com/johndyer/mediaelement/zipball/master
 
 </li>
 <li>
-Download [mep-feature-playlist] (https://github.com/JeyKeu/mep-feature-playlist/zipball/master)
+Download **[mep-feature-playlist] (https://github.com/JeyKeu/mep-feature-playlist/zipball/master)**
 
 </li>
-<li>Include mediaelement-and-player.js</li>
-<li>Include mep-feature-playlist.js</li>
+<li>Include **mediaelement-and-player.js**</li>
+<li>Include **mep-feature-playlist.js**</li>
 <li>Add this script to your page:
 
 
