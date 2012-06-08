@@ -3,31 +3,20 @@ mep-feature-playlist -  A playplist plugin for MediaElementjs
 
 Usage:
 ----------
-<ol>
-<li>
-Download [mediaElemntjs] (http://github.com/johndyer/mediaelement/zipball/master)
+1-
+Download **[mediaElemntjs] (http://github.com/johndyer/mediaelement/zipball/master)**
 
-</li>
-<li>
-Download 
+2-
+Download **[mep-feature-playlist] (https://github.com/JeyKeu/mep-feature-playlist/zipball/master)**
 
-**[mep-feature-playlist] (https://github.com/JeyKeu/mep-feature-playlist/zipball/master)**
+3- Include 
 
-</li>
-<li>Include 
+- **mediaelement-and-player.js**
 
-**mediaelement-and-player.js**
+- **mep-feature-playlist.js**
 
-</li>
-<li>Include 
+4- Add this script to your page:
 
-**mep-feature-playlist.js**
-
-</li>
-<li>Add this script to your page:
-
-
-    <code>
     <script>
     $(function(){
     
@@ -38,9 +27,8 @@ Download
     
     });
     </script>
-    </code>
-</li>
-</ol>
+
+You will also need to replace the controls.png with the on included with this plugin. 
 
 Screenshots
 =========================
