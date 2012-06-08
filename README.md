@@ -10,13 +10,8 @@ Usage:
 <li>Include ```/mep-feature-playlist.js```</li>
 <li>Add this script to you page:
 
-   ```
-   
-   <script>
-            $('audio,video').mediaelementplayer({alwaysShowControls:false,features: ['playpause','playlist','progress','volume','sourcechooser']});
-        </script>
-        
-   ```
+JAVASCRIPT:
+    $('audio,video').mediaelementplayer({alwaysShowControls:false,features: ['playpause','playlist','progress','volume','sourcechooser']});
 </li>
 <li></li>
 </ol>
