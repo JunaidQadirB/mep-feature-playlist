@@ -34,3 +34,5 @@ Download [mep-feature-playlist] (https://github.com/JeyKeu/mep-feature-playlist/
 
 For more option and installation [instructions] (http://mediaelementjs.com/#installation)
 
+###[Demo] (http://jq.thebrandcrew.com/garage/mep-feature-playlist/)
+
