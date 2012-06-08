@@ -44,6 +44,10 @@ When the player is loaded with the **playist** feature, it will add playlist tog
 
 ![MEjs Expanded playlist](http://jq.thebrandcrew.com/garage/mep-feature-playlist/img/playlist_expanded.jpg "MEjs Expanded playlist")
 
+**While Playing**
+
+![MEjs Playing](http://jq.thebrandcrew.com/garage/mep-feature-playlist/img/playlist_expanded_playing.jpg "MEjs Playing")
+
 
 More options and installation instructions related to MediaElementjs itself can be found [here] (http://mediaelementjs.com/#installation).
 
