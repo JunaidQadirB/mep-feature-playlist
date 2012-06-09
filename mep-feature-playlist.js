@@ -1,6 +1,7 @@
 /**
  * MediaElement Playlist Feature (plugin). 
  * @author Junaid Qadir Baloch <shekhanzai.baloch@gmail.com>
+ * Dual licensed under the MIT or GPL Version 2 licenses.
  * Twitter handle: jeykeu
 */
 (function($) {
