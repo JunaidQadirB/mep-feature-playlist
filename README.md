@@ -31,7 +31,7 @@ Download **[mep-feature-playlist] (https://github.com/JeyKeu/mep-feature-playlis
 5- Add the audio tag and your tracks as follows:
 
     <audio id="player2" controls="controls">
-        <source src="media/AirReview-Landmarks-02-ChasingCorporate.mp3" type="audio/mp3">
+        <source src="media/AirReview-Landmarks-02-ChasingCorporate.mp3" type="audio/mp3"/>
         <source src="media/framing.mp3" type="audio/mp3"/>
     </audio>
     
