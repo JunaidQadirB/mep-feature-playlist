@@ -59,5 +59,5 @@ When the player is loaded with the **playist** feature, it will add playlist tog
 
 More options and installation instructions related to MediaElementjs itself can be found [here] (http://mediaelementjs.com/#installation).
 
-###[Demo] (http://jq.thebrandcrew.com/garage/mep-feature-playlist/)
+###[Demo] (http://projects.junaidbaloch.com/mep-feature-playlist/)
 
