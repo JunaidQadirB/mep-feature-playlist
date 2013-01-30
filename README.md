@@ -38,27 +38,21 @@ Usage:
         <source src="media/framing.mp3" title="Framing" type="audio/mpeg"/>
     </audio>
 
+It will use title attribute as track name, falls back to file name if no title is specified.
 
-NOT UPDATED SECTIONS
-=
 Screenshots
-
+==
 **Default Collapsed**
 
-When the player is loaded with the **playist** feature, it will add playlist toggle button along with **next** and **previous** buttons.
-
-![MEjs Collapsed playlist](http://jq.thebrandcrew.com/garage/mep-feature-playlist/img/playlist_collapsed.jpg "MEjs Collapsed playlist")
-
+![MEjs Collapsed playlist](http://andrewberezovsky.ru/demo/screenshots/playlist_collapsed.png "MEjs Collapsed playlist")
 
 **Playlist Expanded**
 
-![MEjs Expanded playlist](http://jq.thebrandcrew.com/garage/mep-feature-playlist/img/playlist_expanded.jpg "MEjs Expanded playlist")
+![MEjs Expanded playlist](http://andrewberezovsky.ru/demo/screenshots/playlist_expanded.png "MEjs Expanded playlist")
 
-**While Playing**
+- Yellow - playing track
+- Green - track to play on click
 
-![MEjs Playing](http://jq.thebrandcrew.com/garage/mep-feature-playlist/img/playlist_expanded_playing.jpg "MEjs Playing")
+More options and installation instructions related to MediaElement.js can be found [here] (http://mediaelementjs.com/#installation).
 
-
-More options and installation instructions related to MediaElementjs itself can be found [here] (http://mediaelementjs.com/#installation).
-
-###[Demo] (http://projects.junaidbaloch.com/mep-feature-playlist/)
+###[Demo] (http://andrewberezovsky.ru/demo/backgroundaudio7/)
