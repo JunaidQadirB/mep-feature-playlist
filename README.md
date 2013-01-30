@@ -1,5 +1,5 @@
 mep-feature-playlist -  A playlist plugin for MediaElement.js
-
+=
 Usage:
 
 1 - Download **[MediaElement.js] (http://mediaelementjs.com/)**
@@ -24,22 +24,23 @@ Usage:
     });
     </script>
     
-    playlistfeature - general feature to enable playlist functionality; it just builds the internal playlist layer, it should be present if you want to use playlist
-    prevtrack - button to play the previous track in the playlist
-    nexttrack - button to play the next track in the playlist
-    loop - toggle to turn repeat on or off
-    shuffle - toggle to turn shuffle on or off - DOESN'T WORK YET
-    playlist - playlist button to show/hide playlist
+- **playlistfeature** - general feature to enable playlist functionality; it just builds the internal playlist layer, it should be present if you want to use playlist
+- **prevtrack** - button to play the previous track in the playlist
+- **nexttrack** - button to play the next track in the playlist
+- **loop** - toggle to turn repeat on or off
+- **shuffle** - toggle to turn shuffle on or off - DOESN'T WORK YET
+- **playlist** - playlist button to show/hide playlist
 
 5 - Add the audio tag and your tracks:
 
-    <audio id="player2" controls="controls" autoplay="autoplay">
+    <audio controls="controls" autoplay="autoplay">
         <source src="media/AirReview-Landmarks-02-ChasingCorporate.mp3" title="Chasing Corporate" type="audio/mpeg"/>
         <source src="media/framing.mp3" title="Framing" type="audio/mpeg"/>
     </audio>
 
 
-==NOT UPDATED SECTIONS==
+NOT UPDATED SECTIONS
+=
 Screenshots
 
 **Default Collapsed**
