@@ -1,66 +1,69 @@
-/* 
-    Document   : mep-feature-playlist
-    Created on : Jun 5, 2012, 1:22:26 AM
-    Author     : Junaid Qadir Baloch <shekhanzai.baloch@gmail.com>
-    
+/*
+    Document        : mep-feature-playlist.css
+    Author          : Andrew Berezovsky <andrew.berezovsky@gmail.com>
+    Original Author : Junaid Qadir Baloch <shekhanzai.baloch@gmail.com>
 */
-
-
-/*Start: PlaylistWindow*/
-.mejs-playlistWindow{
-    position: absolute;
-    top:  30px;
-    left: 0;
-    height: 200px!important;
-    overflow-y: auto;
-    background: #000000;
-    padding: 4px 0;
-}
 
 /* Start: Show/Hide Playlist*/
 .mejs-controls .mejs-show-playlist button {
-    background-position: -96px -16px;
+  background: transparent url(controls-playlist.png) no-repeat;
+  background-position: -16px -16px;
 }
 .mejs-controls .mejs-hide-playlist button {
-    background-position: -110px -16px;
+  background: transparent url(controls-playlist.png) no-repeat;
+  background-position: -16px 0;
 }
 /* End: Show/Hide Playlist */
 
 /* Start: Previous */
-.mejs-controls .mejs-prev button {
-    background-position: -144px -16px;
+.mejs-controls .mejs-prevtrack button {
+  background: transparent url(controls-playlist.png) no-repeat;
+  background-position: 0 -16px;
 }
 /* End: Previous */
 
 /* Start: Next */
-.mejs-controls .mejs-next button {
-    background-position:-144px 0;
+.mejs-controls .mejs-nexttrack button {
+  background: transparent url(controls-playlist.png) no-repeat;
 }
 /* End: Next */
 
-.mejs-playlistWindow a, .mejs-playlistWindow a:hover, .mejs-playlistWindow a:visited, .mejs-playlistWindow a:active{
-    text-decoration: none;
-    color: white;
-    font-size: 11px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-
+/* Start: Shuffle */
+.mejs-controls .mejs-shuffle-on button {
+  background: transparent url(controls-playlist.png) no-repeat;
+  background-position: -32px 0;
 }
-
-
-
-.mejs-playlistWindow a.current{
-    font-weight: bold;
+.mejs-controls .mejs-shuffle-off button {
+  background: transparent url(controls-playlist.png) no-repeat;
+  background-position: -32px -16px;
 }
+/* End: Shuffle */
 
-.mejs-playlistWindow ul
-{
-    margin: 0;
-    padding: 5px 10px;
+/*Start: Playlist*/
+.mejs-playlist {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  height: 70px!important;
+  overflow-y: auto;
+  background: #000000;
 }
-.mejs-playlistWindow li{
-    height: 20px;
-    overflow: hidden;
-    padding-left: 2px;
+.mejs-playlist ul {
+  margin: 0;
+  padding: 5px;
 }
-/*End: PlaylistWindow*/
+.mejs-playlist li {
+  color: white;
+  font-size: 11px;
+  height: 16px;
+  overflow: hidden;
+  margin: 2px;
+  cursor: pointer;
+}
+.mejs-playlist li:hover {
+  color: green;
+}
+.mejs-playlist li.current {
+  color: yellow;
+}
+/*End: Playlist*/
