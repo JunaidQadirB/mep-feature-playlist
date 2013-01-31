@@ -1,5 +1,7 @@
 mep-feature-playlist -  A playlist plugin for MediaElement.js
 =
+[Demo] (http://andrewberezovsky.ru/demo/backgroundaudio7/)
+
 Usage:
 
 1 - Download **[MediaElement.js] (http://mediaelementjs.com/)**
@@ -52,17 +54,15 @@ It will use title attribute as track name, falls back to file name if no title i
 
 Screenshots
 ==
-**Default Collapsed**
+**Playlist Collapsed**
 
-![MEjs Collapsed playlist](http://andrewberezovsky.ru/demo/screenshots/playlist_collapsed.png "MEjs Collapsed playlist")
+![MediaElement.js Collapsed playlist](http://andrewberezovsky.ru/demo/screenshots/playlist_collapsed.png "MediaElement.js Collapsed playlist")
 
 **Playlist Expanded**
 
-![MEjs Expanded playlist](http://andrewberezovsky.ru/demo/screenshots/playlist_expanded.png "MEjs Expanded playlist")
+![MediaElement.js Expanded playlist](http://andrewberezovsky.ru/demo/screenshots/playlist_expanded.png "MediaElement.js Expanded playlist")
 
 - Yellow - playing track
 - Green - track to play on click
 
 More options and installation instructions related to MediaElement.js can be found [here] (http://mediaelementjs.com/#installation).
-
-###[Demo] (http://andrewberezovsky.ru/demo/backgroundaudio7/)

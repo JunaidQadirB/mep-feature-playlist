@@ -206,5 +206,5 @@
     media.addEventListener('ended', function(e) {
       player.playNextTrack();
     }, false);
-  }
+  };
 })(jQuery);
