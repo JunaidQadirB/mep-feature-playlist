@@ -18,7 +18,6 @@
 
   // LOOP TOGGLE
   MediaElementPlayer.prototype.buildloop = function(player, controls, layers, media) {
-    //console.log(player); console.log(controls); console.log(layers); console.log(media);
     var loop = $('<div class="mejs-button mejs-loop-button ' + ((player.options.loop) ? 'mejs-loop-on' : 'mejs-loop-off') + '">' +
       '<button type="button" aria-controls="' + player.id + '" title="' + player.options.loopText + '"></button>' +
       '</div>')
@@ -39,7 +38,6 @@
   };
   // SHUFFLE TOGGLE
   MediaElementPlayer.prototype.buildshuffle = function(player, controls, layers, media) {
-    //console.log(player); console.log(controls); console.log(layers); console.log(media);
     var shuffle = $('<div class="mejs-button mejs-shuffle-button ' + ((player.options.shuffle) ? 'mejs-shuffle-on' : 'mejs-shuffle-off') + '">' +
       '<button type="button" aria-controls="' + player.id + '" title="' + player.options.shuffleText + '"></button>' +
       '</div>')
@@ -78,7 +76,6 @@
   };
   // PLAYLIST BUTTON
   MediaElementPlayer.prototype.buildplaylist = function(player, controls, layers, media) {
-    //console.log(player); console.log(controls); console.log(layers); console.log(media);
     var playlistButton = $('<div class="mejs-button mejs-playlist-button ' + ((player.options.playlist) ? 'mejs-hide-playlist' : 'mejs-show-playlist') + '">' +
       '<button type="button" aria-controls="' + player.id + '" title="' + player.options.playlistText + '"></button>' +
       '</div>')
@@ -98,7 +95,6 @@
   
   // PLAYLIST WINDOW
   MediaElementPlayer.prototype.buildplaylistfeature = function(player, controls, layers, media) {
-    //console.log(player); console.log(controls); console.log(layers); console.log(media);
     var playlist = $('<div class="mejs-playlist mejs-layer">' +
       '<ul class="mejs"></ul>' +
       '</div>')
@@ -156,14 +152,20 @@
 
     player.playNextTrack = function() {
       var current = layers.find('.mejs-playlist > ul > li.current');
-      /*var notplayed = layers.find('.mejs-playlist > ul > li').not('.played');
+      var notplayed = layers.find('.mejs-playlist > ul > li').not('.played');
       if (notplayed.length < 1) {
         current.removeClass('played').siblings().removeClass('played');
-        notplayed = layers.find('.mejs-playlist > ul > li').not('.played');
-      }*/
-      var nxt = current.next();
-      if (nxt.length < 1 && player.options.loop) {
-        nxt = current.siblings().first();
+        notplayed = layers.find('.mejs-playlist > ul > li').not('.current');
+      }
+      if (player.options.shuffle) {
+        var random = Math.floor(Math.random()*notplayed.length);
+        var nxt = notplayed.eq(random);
+      }
+      else {
+        var nxt = current.next();
+        if (nxt.length < 1 && player.options.loop) {
+          nxt = current.siblings().first();
+        }
       }
       if (nxt.length == 1) {
         nxt.addClass('current played').siblings().removeClass('current');
@@ -172,14 +174,21 @@
     };
     player.playPrevTrack = function() {
       var current = layers.find('.mejs-playlist > ul > li.current');
-      /*var notplayed = layers.find('.mejs-playlist > ul > li').not('.played');
-      if (notplayed.length < 1) {
-        current.removeClass('played').siblings().removeClass('played');
-        notplayed = layers.find('.mejs-playlist > ul > li').not('.played');
-      }*/
-      var prev = current.prev();
-      if (prev.length < 1 && player.options.loop) {
-        prev = current.siblings().last();
+      var current = layers.find('.mejs-playlist > ul > li.current');
+      var played = layers.find('.mejs-playlist > ul > li.played').not('.current');
+      if (played.length < 1) {
+        current.removeClass('played');
+        played = layers.find('.mejs-playlist > ul > li').not('.current');
+      }
+      if (player.options.shuffle) {
+        var random = Math.floor(Math.random()*played.length);
+        var prev = played.eq(random);
+      }
+      else {
+        var prev = current.prev();
+        if (prev.length < 1 && player.options.loop) {
+          prev = current.siblings().last();
+        }
       }
       if (prev.length == 1) {
         current.removeClass('played');

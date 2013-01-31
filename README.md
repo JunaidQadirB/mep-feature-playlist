@@ -18,6 +18,8 @@ Usage:
     <script>
     $(function(){
         $('audio,video').mediaelementplayer({
+            loop: true,
+            shuffle: true,
             playlist: true,
             playlistposition: 'bottom',
             features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'loop', 'shuffle', 'playlist', 'current', 'progress', 'duration', 'volume'],
@@ -26,6 +28,8 @@ Usage:
     </script>
 
 Options:
+- **loop** - loop through the playlist; defaults to 'false'
+- **shuffle** - shuffle playlist; defaults to 'false'
 - **playlist** - controls either to show playlist by default or not; defaults to 'false'
 - **playlistposition** - can be either 'top' or 'bottom' to show playlist on top of the player or under it; defaults to 'top'
 
@@ -34,7 +38,7 @@ Features:
 - **prevtrack** - button to play the previous track in the playlist
 - **nexttrack** - button to play the next track in the playlist
 - **loop** - toggle to turn repeat on or off
-- **shuffle** - toggle to turn shuffle on or off - DOESN'T WORK YET
+- **shuffle** - toggle to turn shuffle on or off
 - **playlist** - playlist button to show/hide playlist
 
 5 - Add the audio tag and your tracks:
