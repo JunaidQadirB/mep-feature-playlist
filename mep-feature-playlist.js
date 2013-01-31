@@ -120,7 +120,8 @@
 
     // calculate tracks and build playlist
     var tracks = [];
-    $(media).children('source').each(function(index, element) {
+    //$(media).children('source').each(function(index, element) { // doesn't work in Opera 12.12
+    $('#'+player.id).find('.mejs-mediaelement source').each(function(index, element) {
       if ($.trim(this.src) != '') {
         var track = {};
         track.source = $.trim(this.src);
@@ -151,11 +152,12 @@
     });
 
     player.playNextTrack = function() {
-      var current = layers.find('.mejs-playlist > ul > li.current');
-      var notplayed = layers.find('.mejs-playlist > ul > li').not('.played');
+      var tracks = layers.find('.mejs-playlist > ul > li');
+      var current = tracks.filter('.current');
+      var notplayed = tracks.not('.played');
       if (notplayed.length < 1) {
         current.removeClass('played').siblings().removeClass('played');
-        notplayed = layers.find('.mejs-playlist > ul > li').not('.current');
+        notplayed = tracks.not('.current');
       }
       if (player.options.shuffle) {
         var random = Math.floor(Math.random()*notplayed.length);
@@ -173,12 +175,12 @@
       }
     };
     player.playPrevTrack = function() {
-      var current = layers.find('.mejs-playlist > ul > li.current');
-      var current = layers.find('.mejs-playlist > ul > li.current');
-      var played = layers.find('.mejs-playlist > ul > li.played').not('.current');
+      var tracks = layers.find('.mejs-playlist > ul > li');
+      var current = tracks.filter('.current');
+      var played = tracks.filter('.played').not('.current');
       if (played.length < 1) {
         current.removeClass('played');
-        played = layers.find('.mejs-playlist > ul > li').not('.current');
+        played = tracks.not('.current');
       }
       if (player.options.shuffle) {
         var random = Math.floor(Math.random()*played.length);
