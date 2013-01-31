@@ -18,12 +18,18 @@ Usage:
     <script>
     $(function(){
         $('audio,video').mediaelementplayer({
-            alwaysShowControls:false, 
-            features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'loop', 'shuffle', 'playlist', 'current', 'progress', 'duration', 'volume']
+            playlist: true,
+            playlistposition: 'bottom',
+            features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'loop', 'shuffle', 'playlist', 'current', 'progress', 'duration', 'volume'],
         });
     });
     </script>
-    
+
+Options:
+- **playlist** - controls either to show playlist by default or not; defaults to 'false'
+- **playlistposition** - can be either 'top' or 'bottom' to show playlist on top of the player or under it; defaults to 'top'
+
+Features:
 - **playlistfeature** - general feature to enable playlist functionality; it just builds the internal playlist layer, it should be present if you want to use playlist
 - **prevtrack** - button to play the previous track in the playlist
 - **nexttrack** - button to play the next track in the playlist
