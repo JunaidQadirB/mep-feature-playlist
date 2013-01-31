@@ -42,11 +42,11 @@
 /*Start: Playlist*/
 .mejs-playlist {
   position: absolute;
-  bottom: 30px;
   left: 0;
-  height: 70px!important;
+  height: 200px !important;
   overflow-y: auto;
   background: #000000;
+  opacity: 0.8;
 }
 .mejs-playlist ul {
   margin: 0;

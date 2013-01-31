@@ -79,23 +79,19 @@
   // PLAYLIST BUTTON
   MediaElementPlayer.prototype.buildplaylist = function(player, controls, layers, media) {
     //console.log(player); console.log(controls); console.log(layers); console.log(media);
-    var playlistButton = $('<div class="mejs-button mejs-playlist-button mejs-show-playlist">' +
+    var playlistButton = $('<div class="mejs-button mejs-playlist-button ' + ((player.options.playlist) ? 'mejs-hide-playlist' : 'mejs-show-playlist') + '">' +
       '<button type="button" aria-controls="' + player.id + '" title="' + player.options.playlistText + '"></button>' +
       '</div>')
       .appendTo(controls)
       .click(function(e) {
-        if (typeof media.playlist == 'undefined') {
-          media.playlist = false;
-        }
-        if (media.playlist) {
-          layers.children('.mejs-playlist').hide();
-          playlistButton.removeClass('mejs-hide-playlist').addClass('mejs-show-playlist');
-          media.playlist = false;
-        }
-        else {
+        player.options.playlist = !player.options.playlist;
+        if (player.options.playlist) {
           layers.children('.mejs-playlist').show();
           playlistButton.removeClass('mejs-show-playlist').addClass('mejs-hide-playlist');
-          media.playlist = true;
+        }
+        else {
+          layers.children('.mejs-playlist').hide();
+          playlistButton.removeClass('mejs-hide-playlist').addClass('mejs-show-playlist');
         }
       });
   };
@@ -106,7 +102,16 @@
     var playlist = $('<div class="mejs-playlist mejs-layer">' +
       '<ul class="mejs"></ul>' +
       '</div>')
-      .appendTo(layers).hide();
+      .appendTo(layers);
+    if (!player.options.playlist) {
+      playlist.hide();
+    }
+    if (player.options.playlistposition == 'bottom') {
+      playlist.css('top', player.options.audioHeight + 'px');
+    }
+    else {
+      playlist.css('bottom', player.options.audioHeight + 'px');
+    }
     var getTrackName = function(trackUrl) {
       var trackUrlParts = trackUrl.split("/");
       if (trackUrlParts.length > 0) {
