@@ -144,7 +144,7 @@
     layers.find('.mejs-playlist > ul li').click(function(e) {
       if (!$(this).hasClass('current')) {
         player.playTrack($(this).attr('data-url'));
-        $(this).addClass('current').siblings().removeClass('current');
+        $(this).addClass('current played').siblings().removeClass('current');
       }
       else {
         player.play();
