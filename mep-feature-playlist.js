@@ -188,8 +188,8 @@
       // play track from playlist when clicking it
       layers.find('.mejs-playlist > ul li').click(function(e) {
         if (!$(this).hasClass('current')) {
-          player.playTrack($(this).attr('data-url'));
-          $(this).addClass('current played').siblings().removeClass('current');
+          $(this).addClass('played');
+          player.playTrack($(this));
         }
         else {
           player.play();
@@ -221,8 +221,8 @@
         }
       }
       if (nxt.length == 1) {
-        nxt.addClass('current played').siblings().removeClass('current');
-        t.playTrack(nxt.attr('data-url'));
+        nxt.addClass('played');
+        t.playTrack(nxt);
       }
     },
     playPrevTrack: function() {
@@ -246,16 +246,22 @@
       }
       if (prev.length == 1) {
         current.removeClass('played');
-        prev.addClass('current').siblings().removeClass('current');
-        t.playTrack(prev.attr('data-url'));
+        t.playTrack(prev);
       }
     },
-    playTrack: function(url) {
+    playTrack: function(track) {
       var t = this;
       t.pause();
-      t.setSrc(url);
+      t.setSrc(track.attr('data-url'));
       t.load();
       t.play();
+      track.addClass('current').siblings().removeClass('current');
+    },
+    playTrackURL: function(url) {
+      var t = this;
+      var tracks = t.layers.find('.mejs-playlist > ul > li');
+      var track = tracks.filter('[data-url="'+url+'"]');
+      t.playTrack(track);
     }
   });
 
