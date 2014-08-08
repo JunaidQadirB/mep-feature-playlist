@@ -45,16 +45,16 @@ Screenshots
 
 When the player is loaded with the **playist** feature, it will add playlist toggle button along with **next** and **previous** buttons.
 
-![MEjs Collapsed playlist](http://jq.thebrandcrew.com/garage/mep-feature-playlist/img/playlist_collapsed.jpg "MEjs Collapsed playlist")
+![MEjs Collapsed playlist](http://projects.junaidqadir.com/mep-feature-playlist/img/playlist_collapsed.jpg "MEjs Collapsed playlist")
 
 
 **Playlist Expanded**
 
-![MEjs Expanded playlist](http://jq.thebrandcrew.com/garage/mep-feature-playlist/img/playlist_expanded.jpg "MEjs Expanded playlist")
+![MEjs Expanded playlist](http://projects.junaidqadir.com/mep-feature-playlist/img/playlist_expanded.jpg "MEjs Expanded playlist")
 
 **While Playing**
 
-![MEjs Playing](http://jq.thebrandcrew.com/garage/mep-feature-playlist/img/playlist_expanded_playing.jpg "MEjs Playing")
+![MEjs Playing](http://projects.junaidqadir.com/mep-feature-playlist/img/playlist_expanded_playing.jpg "MEjs Playing")
 
 
 More options and installation instructions related to MediaElementjs itself can be found [here] (http://mediaelementjs.com/#installation).
