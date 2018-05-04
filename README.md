@@ -1,7 +1,9 @@
 mep-feature-playlist -  A playplist plugin for MediaElementjs (DEPRICATED)
 ====================
 
-Please consider using the built-in [playlist plugin](https://github.com/mediaelement/mediaelement-plugins/blob/master/docs/playlist.md) for MediaelEmentjs.
+
+
+**Please consider using the built-in [playlist plugin](https://github.com/mediaelement/mediaelement-plugins/blob/master/docs/playlist.md) for MediaelEmentjs.**
 
 
 
